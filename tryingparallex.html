@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parallax Accident → Fire Demo</title>
+  <style>
+    body, html { margin:0; padding:0; overflow-x:hidden; font-family:sans-serif; color:white; }
+    .parallax-layer {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+    .content { padding: 60px; background: #111; text-align:center; }
+    .section-title { font-size:2.5em; margin-bottom:20px; }
+  </style>
+</head>
+<body>
+
+  <!-- Layer 1: distant road background -->
+  <section class="parallax-layer" style="background-image:url('tryingparallex0.jpg');">
+    <div class="content"><div class="section-title">Agents on Distant Road View</div>
+      Agents surveying the accident site from afar.
+    </div>
+  </section>
+
+  <!-- Layer 2: closer road vehicles -->
+  <section class="parallax-layer" style="background-image:url('tryingparallex1.jpg');">
+    <div class="content"><div class="section-title">Vehicles Involved</div>
+      Close‑up view of damaged vehicles.
+    </div>
+  </section>
+
+  <!-- Layer 3: smoke layer -->
+  <section class="parallax-layer" style="background-image:url('layer3_smoke.jpg');">
+    <div class="content"><div class="section-title">Thick Smoke Rises</div>
+      Smoke billowing over the scene.
+    </div>
+  </section>
+
+  <!-- Layer 4: firefighters/rescue -->
+  <section class="parallax-layer" style="background-image:url('layer4_firefighters.jpg');">
+    <div class="content"><div class="section-title">Rescue Agents Arrive</div>
+      Firefighters and paramedics in action.
+    </div>
+  </section>
+
+  <!-- Static narrative block -->
+  <section class="content">
+    <h2>Situation Overview</h2>
+    <p>Description text about the incident, agent commentary, and safety instructions.</p>
+  </section>
+
+  <!-- Layer 5: explosion flash -->
+  <section class="parallax-layer" style="background-image:url('layer5_explosion.jpg');">
+    <div class="content"><div class="section-title">Sudden Explosion!</div>
+      An intense flash beneath the road surface emerges.
+    </div>
+  </section>
+
+  <!-- Layer 6: blazing fire -->
+  <section class="parallax-layer" style="background-image:url('layer6_fire.jpg');">
+    <div class="content"><div class="section-title">Fire Spreads Below</div>
+      Flames and heat engulfing infrastructure.
+    </div>
+  </section>
+
+  <!-- Layer 7: burning building backdrop -->
+  <section class="parallax-layer" style="background-image:url('layer7_burning_building.jpg');">
+    <div class="content"><div class="section-title">Flames Reach Buildings</div>
+      Inferno affecting surrounding areas.
+    </div>
+  </section>
+
+  <!-- Layer 8: aerial/chaos overhead -->
+  <section class="parallax-layer" style="background-image:url('layer8_aerial.jpg');">
+    <div class="content"><div class="section-title">Aerial Overview</div>
+      Drone/sky view of the disaster zone.
+    </div>
+  </section>
+
+  <!-- Layer 9: aftermath & cleanup -->
+  <section class="parallax-layer" style="background-image:url('layer9_aftermath.jpg');">
+    <div class="content"><div class="section-title">Aftermath & Recovery</div>
+      Agents clearing and restoring order.
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>Agent Actions & Follow-up</h2>
+    <p>Summaries, data, logs, next steps, or simulation controls.</p>
+  </section>
+
+</body>
+</html>

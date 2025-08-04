@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BlazeEye Parallax</title>
+<style>
+  body, html {
+    margin:0; padding:0; overflow-x:hidden;
+  }
+  .parallax-container {
+    position: relative;
+    height: 200vh; /* Makes scrolling possible */
+    background: #000; /* Base background if needed */
+  }
+  .layer {
+    position: fixed;
+    top:0; left:0; right:0;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    will-change: transform;
+  }
+  .layer.bg {
+    z-index:1;
+    background-image: url('firewatch.jpg');
+  }
+  .layer.mid {
+    z-index:2;
+    background-image: url('middle1.jpg');
+  }
+  .layer.front {
+    z-index:3;
+    background-image: url('middle.jpg');
+  }
+</style>
+</head>
+<body>
+
+<div class="parallax-container">
+  <div class="layer bg"></div>
+  <div class="layer mid"></div>
+  <div class="layer front"></div>
+</div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.scrollY;
+    document.querySelector('.layer.mid').style.transform = `translateY(${scrollTop * 0.3}px)`;
+    document.querySelector('.layer.front').style.transform = `translateY(${scrollTop * 0.6}px)`;
+  });
+</script>
+
+</body>
+</html>
